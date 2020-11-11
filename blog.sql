@@ -11,7 +11,7 @@
  Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 11/11/2020 15:43:40
+ Date: 11/11/2020 15:45:21
 */
 
 SET NAMES utf8mb4;
@@ -32,7 +32,7 @@ CREATE TABLE `admin`  (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES (10080, 'brilliantLin', '111111');
+INSERT INTO `admin` VALUES (1, 'brilliantLin', '111111');
 
 -- ----------------------------
 -- Table structure for admin_login_log
