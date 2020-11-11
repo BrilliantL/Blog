@@ -1,3 +1,1 @@
-SSM+Thymeleaf+Bootstrap
-
-test
+技术栈：SSM+Thymeleaf+Bootstrap
