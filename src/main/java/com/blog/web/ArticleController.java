@@ -90,7 +90,7 @@ public class ArticleController {
         article.setTitle(request.getParameter("title"));
         article.setCatalogId(Integer.parseInt(request.getParameter("catalogId")));
         article.setKeywords(request.getParameter("keywords"));
-        article.setdesci(request.getParameter("desci"));
+        article.setDesci(request.getParameter("desci"));
         article.setContent(request.getParameter("content"));
         article.setTime(new Date());
         if (articleService.insert(article)){
@@ -105,9 +105,10 @@ public class ArticleController {
     public ModelAndView articleSearch(HttpServletRequest request){
         String word=request.getParameter("word");
         List<Article> articles=articleService.selectByWord(word);
-
+        PageInfo<Article> pageInfo=new PageInfo<Article>(articles);
         ModelAndView modelAndView=new ModelAndView("/admin/article_list");
         modelAndView.addObject("articles",articles);
+        modelAndView.addObject("pageInfo",pageInfo);
         return modelAndView;
     }
     @RequestMapping(value = "/admin/article/edit")
@@ -125,7 +126,7 @@ public class ArticleController {
         article.setTitle(request.getParameter("title"));
         article.setCatalogId(Integer.parseInt(request.getParameter("catalogId")));
         article.setKeywords(request.getParameter("keywords"));
-        article.setdesci(request.getParameter("desci"));
+        article.setDesci(request.getParameter("desci"));
         article.setContent(request.getParameter("content"));
         ModelAndView modelAndView=new ModelAndView("/admin/article_edit");
         if (articleService.updateArticle(article)){

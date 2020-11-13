@@ -78,9 +78,10 @@
 </table>
 <nav aria-label="Page navigation example" style="position: absolute;bottom: 10px;left: 42%">
     <ul class="pagination justify-content-center">
-        <li class="page-item" th:classappend="${pageInfo.pageNum == 1}?disabled:''">
+        <li class="page-item" th:classappend="${pageInfo.pageNum != null && pageInfo.pageNum == 1 ? 'disabled':''}  ">
             <a class="page-link" href="/admin/article/list?page=1" >&laquo;</a>
         </li>
+        
 
         <th:block th:each="pageNo:${#numbers.sequence(1,pageInfo.pageNum)}">
             <li class="page-item" th:classappend="${pageInfo.pageNum==pageNo}?'active':''">

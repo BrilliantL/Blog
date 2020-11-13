@@ -43,11 +43,11 @@ public class Catalog {
         this.type = type;
     }
 
-    public String getdesci() {
+    public String getDesci() {
         return desci;
     }
 
-    public void setdesci(String desci) {
+    public void setDesci(String desci) {
         this.desci = desci == null ? null : desci.trim();
     }
 }

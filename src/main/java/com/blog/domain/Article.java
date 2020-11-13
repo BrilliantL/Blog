@@ -46,11 +46,11 @@ public class Article {
         this.keywords = keywords == null ? null : keywords.trim();
     }
 
-    public String getdesci() {
+    public String getDesci() {
         return desci;
     }
 
-    public void setdesci(String desci) {
+    public void setDesci(String desci) {
         this.desci = desci == null ? null : desci.trim();
     }
 

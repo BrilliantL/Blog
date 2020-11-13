@@ -42,7 +42,7 @@
         </div>
         <div class="form-group">
             <label for="desci">简介</label>
-            <textarea class="form-control" id="desci" rows="3" name="desci" placeholder="简介" th:text="${article.getdesci()}"></textarea>
+            <textarea class="form-control" id="desci" rows="3" name="desci" placeholder="简介" th:text="${article.desci}"></textarea>
         </div>
         <div id="cont" style="display: none" th:utext="${article.content}">
 
